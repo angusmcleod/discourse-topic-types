@@ -1,0 +1,19 @@
+.topic-type-btn-container {
+  > div {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.topic-type-btn {
+  color: #333;
+  color: $tertiary;
+  width: 100px;
+  .fa {
+    margin-right: 3px;
+  }
+  &.active {
+    color: dark-light-choose(#fff, scale-color($primary, $lightness: 60%));
+    background: $tertiary;
+  }
+}

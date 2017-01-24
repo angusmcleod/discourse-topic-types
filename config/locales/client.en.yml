@@ -1,0 +1,8 @@
+en:
+  js:
+    topic:
+      type:
+        discussion: 'discussion'
+        question: 'question'
+        wiki: 'wiki'
+        rating: 'rating'

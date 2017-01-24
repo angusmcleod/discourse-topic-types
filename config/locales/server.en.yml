@@ -1,0 +1,5 @@
+en:
+  site_settings:
+    topic_types: "Select topic types to display in composer"
+    topic_type_default: "Select default topic type"
+    topic_type_add_to_tags: "Add topic type as a tag"

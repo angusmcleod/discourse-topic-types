@@ -1,0 +1,23 @@
+plugins:
+  topic_types:
+    client: true
+    type: list
+    default: ''
+    choices:
+     - discussion
+     - rating
+     - question
+     - wiki
+
+  topic_type_default:
+    client: true
+    default: 'discussion'
+    type: enum
+    choices:
+     - discussion
+     - rating
+     - question
+     - wiki
+  topic_type_add_to_tags:
+    client: true
+    default: true

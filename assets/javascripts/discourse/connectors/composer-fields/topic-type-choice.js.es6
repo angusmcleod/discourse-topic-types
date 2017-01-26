@@ -1,7 +1,7 @@
 export default {
   setupComponent(args, component) {
     component.set('topicTypes', Discourse.SiteSettings.topic_types.split('|'));
-    component.set('active', args.model.get('topicType'));
+    component.set('activeType', args.model.get('topicType'));
 
     // ensure topic type is at start of composer-fields outlet
     Ember.run.schedule('afterRender', this, function() {
@@ -17,9 +17,11 @@ export default {
         return appRoute.send('showLogin');
       }
 
-      this.set('active', topicType);
-      const controller = this.container.lookup('controller:composer');
-      controller.set('model.topicType', topicType)
+      this.setProperties({
+        activeType: topicType,
+        'model.topicType': topicType
+      });
+      return true
     }
   }
 }

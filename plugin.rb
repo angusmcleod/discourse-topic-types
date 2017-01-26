@@ -25,7 +25,7 @@ after_initialize do
   DiscourseEvent.on(:post_created) do |post, opts, user|
     if post.is_first_post? and opts[:tags]
       topic = Topic.find(post.topic_id)
-      topic_type = opts[:tags] & SiteSetting.topic_types
+      topic_type = opts[:tags] & SiteSetting.topic_types.split('|')
       if topic_type.first == 'wiki'
         post.wiki = true
         post.save!

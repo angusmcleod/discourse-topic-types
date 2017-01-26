@@ -17,7 +17,7 @@ export default {
     ComposerBody.reopen({
       @observes('composer.topicType')
       updateType() {
-        this.resizePartial();
+        this.resizeFull();
       }
     })
 

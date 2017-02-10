@@ -1,8 +1,26 @@
 en:
   js:
+    composer:
+      topic_type:
+        placeholder: "What do you want to say?"
+        suggestion: "It looks like you are {{createType}}"
+    syntaxnet:
+      enable: "Enable SN"
     topic:
       type:
-        discussion: 'discussion'
-        question: 'question'
-        wiki: 'wiki'
-        rating: 'rating'
+        discussion:
+          title: 'discussion'
+          creating: 'starting a discussion'
+          matches: 'talk|discuss|should'
+        question:
+          title: 'question'
+          creating: 'asking a question'
+          matches: 'why|how|?|please|help|what|when'
+        wiki:
+          title: 'wiki'
+          creating: 'creating a wiki'
+          matches: 'law|regulation|rule|wiki|how to'
+        rating:
+          title: 'rating'
+          creating: 'adding a rating'
+          matches: 'firm|service|partner|department|rating'

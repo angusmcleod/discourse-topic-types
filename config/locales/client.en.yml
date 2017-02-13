@@ -1,26 +1,27 @@
 en:
   js:
     composer:
+      input_tip: "hit enter to continue"
       topic_type:
-        placeholder: "What do you want to say?"
-        suggestion: "It looks like you are {{createType}}"
+        placeholder: "Start by writing a post title"
+        suggestion: "It looks like you want to {{typeAct}}"
     syntaxnet:
       enable: "Enable SN"
     topic:
       type:
         discussion:
-          title: 'discussion'
-          creating: 'starting a discussion'
+          label: 'discussion'
+          action: 'start a discussion'
           matches: 'talk|discuss|should'
         question:
-          title: 'question'
-          creating: 'asking a question'
+          label: 'question'
+          action: 'solve a problem'
           matches: 'why|how|?|please|help|what|when'
-        wiki:
-          title: 'wiki'
-          creating: 'creating a wiki'
+        document:
+          label: 'document'
+          action: 'share a document'
           matches: 'law|regulation|rule|wiki|how to'
-        rating:
-          title: 'rating'
-          creating: 'adding a rating'
+        review:
+          label: 'review'
+          action: 'review a service'
           matches: 'firm|service|partner|department|rating'

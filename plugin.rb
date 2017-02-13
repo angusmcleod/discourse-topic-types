@@ -21,9 +21,9 @@ after_initialize do
   require_dependency "application_controller"
   class DiscoursePostType::TypeController < ::ApplicationController
     def enable_syntaxnet
-      if !Docker::Image.exist?('syntaxnet')
-        Jobs.enqueue(:build_syntaxnet_image, {})
-      end
+      #if !Docker::Image.exist?('syntaxnet')
+        #Jobs.enqueue(:build_syntaxnet_image, {})
+      #end
       render json: success_json
     end
 
@@ -85,7 +85,7 @@ after_initialize do
     if post.is_first_post? and opts[:tags]
       topic = Topic.find(post.topic_id)
       topic_type = opts[:tags] & SiteSetting.topic_types.split('|')
-      if topic_type.first == 'wiki'
+      if topic_type.first == 'document'
         post.wiki = true
         post.save!
       end

@@ -15,7 +15,7 @@ export default Ember.Component.extend({
 
   @computed()
   topicTypeLabel() {
-    return `topic.type.${this.get('topicType')}.title`
+    return `topic.type.${this.get('topicType')}.label`
   },
 
   actions: {

@@ -21,15 +21,8 @@ export default {
 
     Composer.reopen({
       topicType: Discourse.SiteSettings.topic_type_default,
-      wiki: Ember.computed.bool('topicType', 'wiki'),
+      wiki: Ember.computed.bool('topicType', 'document'),
       titlePlaceholder: 'composer.topic_type.placeholder'
-    })
-
-    ComposerBody.reopen({
-      @observes('composer.topicType')
-      updateType() {
-        this.resizeFull();
-      }
     })
 
     ComposerTitle.reopen({
@@ -75,7 +68,7 @@ export default {
           let matches = I18n.t(`topic.type.${topicTypes[i]}.matches`).split('|');
           for (var x = 0; x < matches.length; x++) {
             if (title.indexOf(matches[x]) > -1 || body.indexOf(matches[x]) > -1) {
-              let createType = I18n.t(`topic.type.${topicTypes[i]}.creating`);
+              let createType = I18n.t(`topic.type.${topicTypes[i]}.action`);
               message.set('createType', createType);
               this.send('popup', message);
               this.set('composer.topicType', topicTypes[i]);

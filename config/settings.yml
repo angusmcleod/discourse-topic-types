@@ -5,19 +5,18 @@ plugins:
     default: ''
     choices:
      - discussion
-     - rating
+     - review
      - question
-     - wiki
-
+     - document
   topic_type_default:
     client: true
     default: 'discussion'
     type: enum
     choices:
      - discussion
-     - rating
+     - review
      - question
-     - wiki
+     - document
   topic_type_add_to_tags:
     client: true
     default: true
